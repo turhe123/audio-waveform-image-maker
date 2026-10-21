@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO:START — the builder rewrites title / description / keywords for search (see CLAUDE.md) -->
+  <title>Audio Waveform Generator – MP3 to PNG or SVG, Free, No Watermark</title>
+  <meta name="description" content="Make a waveform image from any MP3, WAV or FLAC: bars, lines or outline, your colors, PNG or SVG. Free, no watermark, no upload, works offline.">
+  <meta name="keywords" content="audio waveform generator, waveform image from audio, waveform viewer online, mp3 waveform png, audio to waveform svg, soundwave art generator, waveform visualizer free">
+  <!-- SEO:END -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f14" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://turhe123.github.io/audio-waveform-image-maker/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Audio Waveform Image Maker – Free, Private, In Your Browser">
+  <meta property="og:description" content="Turn any audio file into a waveform picture as PNG or SVG in your browser, with no watermark. Free and open source, nothing is uploaded, works offline.">
+  <meta property="og:url" content="https://turhe123.github.io/audio-waveform-image-maker/">
+  <meta property="og:image" content="https://turhe123.github.io/audio-waveform-image-maker/docs/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Audio Waveform Image Maker">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Audio Waveform Image Maker – Free, Private, In Your Browser">
+  <meta name="twitter:description" content="Turn any audio file into a waveform picture as PNG or SVG in your browser, with no watermark. Free and open source, nothing is uploaded, works offline.">
+  <meta name="twitter:image" content="https://turhe123.github.io/audio-waveform-image-maker/docs/og.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Audio Waveform Image Maker",
+    "alternateName": "Audio Waveform Image Maker – Free, Private, In Your Browser",
+    "description": "Turn any audio file into a waveform picture as PNG or SVG in your browser, with no watermark. Free and open source, nothing is uploaded, works offline.",
+    "url": "https://turhe123.github.io/audio-waveform-image-maker/",
+    "image": "https://turhe123.github.io/audio-waveform-image-maker/docs/og.png",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript. Works offline after the first visit.",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "license": "https://opensource.org/licenses/MIT",
+    "softwareVersion": "1.0.0",
+    "author": { "@type": "Person", "name": "Or Davidai Bachar", "url": "https://github.com/turhe123" },
+    "sameAs": ["https://github.com/turhe123/audio-waveform-image-maker"]
+  }
+  </script>
+  
+  <!-- Page views are counted with GoatCounter: no cookies, no personal data, open source. -->
+  <script data-goatcounter="https://turhe123.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#tool">Skip to the tool</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./" aria-label="Audio Waveform Image Maker home">
+        <img class="brand__icon" src="icon.svg" alt="" width="28" height="28">
+        <span class="brand__name">Audio Waveform Image Maker</span>
+      </a>
+      <nav class="site-nav" aria-label="Page">
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/turhe123/audio-waveform-image-maker" rel="noopener">GitHub</a>
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener" class="site-nav__more">More tools</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <!-- HERO:START — the builder may refine the headline and promise; keep the trust badges -->
+      <h1 class="hero__title">Audio Waveform Image Maker</h1>
+      <p class="hero__lead">Turn any audio file into a waveform picture as PNG or SVG in your browser, with no watermark.</p>
+      <!-- HERO:END -->
+      <ul class="badges" aria-label="Why this tool is safe to use">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Runs in your browser, files never leave your device</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Free, open source, no account, no ads</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works offline after the first visit</li>
+      </ul>
+    </section>
+
+    <section class="container" id="tool" aria-labelledby="tool-title">
+      <div class="tool-card">
+        <!-- TOOL:START — the builder replaces everything between these markers with the real tool UI -->
+        <h2 id="tool-title" class="visually-hidden">Make a waveform image from an audio file</h2>
+        <div class="dropzone dropzone--compact" id="dropzone" tabindex="0" role="button" aria-label="Choose an audio file or drop it here">
+          <label class="visually-hidden" for="file-input">Choose an audio file</label>
+          <input class="dropzone__input" id="file-input" type="file" accept="audio/*,.mp3,.wav,.ogg,.oga,.opus,.flac,.m4a,.aac,.aif,.aiff,.webm,.mp4" multiple aria-describedby="dropzone-hint">
+          <svg class="dropzone__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h2m2-4v8m4-12v16m4-11v6m4-9v12m2-6h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <p class="dropzone__title">Drop an audio file here or <span class="link">choose a file</span></p>
+          <p class="dropzone__hint" id="dropzone-hint">MP3, WAV, OGG, FLAC, M4A and more. Nothing is uploaded. Everything happens on this device.</p>
+        </div>
+        <div class="wf">
+          <div class="wf__stage">
+            <div class="preview wf__preview" id="preview-wrap">
+              <canvas id="preview" role="img" aria-label="Sample waveform preview" width="960" height="540"></canvas>
+            </div>
+            <p class="wf__info" id="info-line">Sample preview. Load an audio file to draw its waveform.</p>
+            <div class="progress" id="progress" hidden role="progressbar" aria-label="Analysing audio" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+            <div class="row wf__actions">
+              <button class="btn btn--primary" id="download-png" type="button" disabled>Download PNG</button>
+              <button class="btn" id="download-svg" type="button" disabled>Download SVG</button>
+            </div>
+            <div class="results" id="results" aria-live="polite"></div>
+          </div>
+          <form class="options wf__options" id="options" novalidate>
+            <div class="field">
+              <label for="style">Style</label>
+              <select id="style">
+                <option value="bars" selected>Bars</option>
+                <option value="lines">Mirrored lines</option>
+                <option value="outline">Outline</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="mode">Loudness</label>
+              <select id="mode">
+                <option value="peak" selected>Peak (sharp)</option>
+                <option value="rms">RMS (softer)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bar-width">Bar width <output id="bar-width-out" for="bar-width">10 px</output></label>
+              <input id="bar-width" type="range" min="1" max="60" step="1" value="10">
+            </div>
+            <div class="field">
+              <label for="bar-gap">Gap <output id="bar-gap-out" for="bar-gap">6 px</output></label>
+              <input id="bar-gap" type="range" min="0" max="40" step="1" value="6">
+            </div>
+            <div class="field">
+              <span class="field__label" id="color-label">Color</span>
+              <div class="row wf__colors">
+                <input id="color" type="color" value="#7c6cf2" aria-labelledby="color-label">
+                <label class="check" for="gradient"><input id="gradient" type="checkbox" checked> Gradient to</label>
+                <input id="color2" type="color" value="#22d3ee" aria-label="Second gradient color">
+              </div>
+            </div>
+            <div class="field">
+              <span class="field__label" id="bg-label">Background</span>
+              <div class="row wf__colors">
+                <input id="bg" type="color" value="#11131c" aria-labelledby="bg-label">
+                <label class="check" for="transparent"><input id="transparent" type="checkbox"> Transparent</label>
+                <label class="check" for="rounded"><input id="rounded" type="checkbox" checked> Round ends</label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="size">Image size</label>
+              <select id="size">
+                <option value="1080x1080">1080 × 1080 (square post)</option>
+                <option value="1920x1080" selected>1920 × 1080 (HD, thumbnail)</option>
+                <option value="1500x500">1500 × 500 (banner)</option>
+                <option value="custom">Custom…</option>
+              </select>
+            </div>
+            <div class="field wf__custom" id="custom-size" hidden>
+              <span class="field__label">Custom size (max 4000 px)</span>
+              <div class="wf__pair">
+                <label class="visually-hidden" for="width">Width in pixels</label>
+                <input id="width" type="number" min="16" max="4000" step="1" value="1920" inputmode="numeric">
+                <span aria-hidden="true">×</span>
+                <label class="visually-hidden" for="height">Height in pixels</label>
+                <input id="height" type="number" min="16" max="4000" step="1" value="1080" inputmode="numeric">
+              </div>
+            </div>
+            <div class="field">
+              <span class="field__label">Range to draw (m:ss or seconds)</span>
+              <div class="wf__pair">
+                <label class="visually-hidden" for="start">Start time</label>
+                <input id="start" type="text" placeholder="Start 0:00" inputmode="decimal" autocomplete="off">
+                <span aria-hidden="true">–</span>
+                <label class="visually-hidden" for="end">End time</label>
+                <input id="end" type="text" placeholder="End" inputmode="decimal" autocomplete="off">
+              </div>
+              <span class="field__hint" id="range-hint">Leave empty to draw the whole file.</span>
+            </div>
+            <button class="visually-hidden" type="submit" tabindex="-1">Download PNG</button>
+          </form>
+        </div>
+        <!-- TOOL:END -->
+      </div>
+    </section>
+
+    <section class="container section" id="how" aria-labelledby="how-title">
+      <h2 id="how-title" class="section__title">How it works</h2>
+      <!-- HOW:START — three honest steps for this tool -->
+      <ol class="steps">
+        <li><strong>Open an audio file.</strong> Drop an MP3, WAV, OGG, FLAC or M4A on the page. Your browser decodes it on this device and shows its duration, sample rate and peak level.</li>
+        <li><strong>Style the waveform.</strong> Pick bars, mirrored lines or an outline, the bar width and gap, one color or a gradient, a background or transparency, the image size and, if you like, only part of the track.</li>
+        <li><strong>Download PNG or SVG.</strong> The image is drawn locally at the exact size you chose, with no watermark, and saved next to your other downloads.</li>
+      </ol>
+      <!-- HOW:END -->
+    </section>
+
+    <section class="container section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="section__title">Questions, answered</h2>
+      <!-- FAQ:START — 4 to 6 questions; keep the privacy, offline and AI answers -->
+      <details class="faq" open>
+        <summary>Are my files uploaded anywhere?</summary>
+        <p>No. Audio Waveform Image Maker runs entirely in your browser. Your files are read into memory on your device, processed with JavaScript, and never sent to a server. You can disconnect from the internet and it keeps working.</p>
+      </details>
+      <details class="faq">
+        <summary>Which audio formats can I use?</summary>
+        <p>Anything your browser can play: MP3, WAV, OGG, Opus, FLAC and, in most browsers, M4A and AAC. If a file cannot be decoded you see a message right under the preview, and nothing else changes.</p>
+      </details>
+      <details class="faq">
+        <summary>PNG or SVG: which should I pick?</summary>
+        <p>PNG is a ready-to-use picture at the size you chose, for social posts and thumbnails. SVG is a vector file with the same bars and colors that stays sharp at any size, which suits prints, posters and laser or vinyl cutters. Turn on Transparent to place either one over your own artwork.</p>
+      </details>
+      <details class="faq">
+        <summary>Is it really free?</summary>
+        <p>Yes. It is open source under the MIT license, with no account, no limits and no ads. If it saves you a paid subscription, you can say thanks on Ko-fi.</p>
+      </details>
+      <details class="faq">
+        <summary>Does it work offline?</summary>
+        <p>Yes. After your first visit the page is cached by a service worker, so it loads without a connection. You can also install it from your browser's menu as an app.</p>
+      </details>
+      <details class="faq">
+        <summary>Was this written by AI?</summary>
+        <p>Yes. Audio Waveform Image Maker was generated by Claude Code from a written specification inside an automated pipeline, with a test suite that runs in a real browser. The full source is on GitHub, so you can read every line before you trust it with your files.</p>
+      </details>
+      <!-- FAQ:END -->
+    </section>
+
+    <section class="container section" id="support">
+      <div class="support-card">
+        <h2 class="section__title">Built by one person, given away for free</h2>
+        <p>Audio Waveform Image Maker is a free alternative to paid tools like Kapwing and Veed audio waveform visualizers. If it earns a place in your bookmarks, a coffee keeps the updates coming.</p>
+        <a class="btn btn--kofi" href="https://ko-fi.com/leodavidai" rel="noopener">☕ Support Or on Ko-fi</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__links">
+        <a href="https://github.com/turhe123/audio-waveform-image-maker" rel="noopener">Source on GitHub</a> ·
+        <a href="https://github.com/turhe123/audio-waveform-image-maker/issues" rel="noopener">Report a bug</a> ·
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener">More free web tools</a> ·
+        <a href="https://ko-fi.com/leodavidai" rel="noopener">Ko-fi</a>
+      </p>
+      <p class="site-footer__disclosure"><strong>Built with AI.</strong> Audio Waveform Image Maker was written by Claude Code inside an automated pipeline from a plain-English spec, as a clean-room implementation: no code or assets from any commercial product. It runs entirely in your browser, makes no network requests except an anonymous, cookieless page-view count, and has had less human review than hand-written software. Bug reports and pull requests are welcome.</p>
+      <p class="site-footer__copy">© 2026 Or Davidai Bachar · MIT License · <span id="sw-status" class="sw-status" aria-live="polite"></span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="site.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
